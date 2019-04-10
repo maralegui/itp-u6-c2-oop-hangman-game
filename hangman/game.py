@@ -69,8 +69,9 @@ class HangmanGame(object):
         self.masked = "*" * len(self.answer)
         self.new_masked = ""
         self.word = GuessWord(self.answer, self.masked)
-        
-    def select_random_word(lista):
+    
+    @classmethod    
+    def select_random_word(cls, lista):
         if len(lista) > 0:
             word_to_guess = random.choice(lista)
             return word_to_guess
